@@ -12,7 +12,7 @@ https://docs.docker.com/compose/install/
 1_ Clonar el repositorio. 
 Preferentemente en /opt.
 
-2_ Ingresar al directorio /mongodb_docker y eejecutar el comando "docker-compose up -d". Al desplegar, se llena el directorio "datadir" con los archivos propios del servicio y quedan mapeados en el disco local del host. Al mismo tiempo, el contenedor toma la configuracion del archivo de este repositorio.
+2_ Ingresar al directorio /mongodb_docker y ejecutar el comando "docker-compose up -d". Al desplegar, se llena el directorio "datadir" con los archivos propios del servicio y quedan mapeados en el disco local del host. Al mismo tiempo, el contenedor toma la configuracion del archivo de este repositorio.
 
 3_ Crear la base de datos y el/los usuarios necesarios:
     
