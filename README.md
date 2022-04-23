@@ -1,6 +1,13 @@
 # mongodb_docker
 proyecto para instanciar una base de datos mongo con docker y configurarla para el Proyecto Final
 
+## Pre requisitos:
+- Docker Engine 
+https://docs.docker.com/engine/install/
+
+- Docker Compose
+https://docs.docker.com/compose/install/
+
 ## Pasos para el despliegue:
 1_ Clonar el repositorio. 
 Preferentemente en /opt.
