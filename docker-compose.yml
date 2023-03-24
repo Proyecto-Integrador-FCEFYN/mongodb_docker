@@ -3,16 +3,17 @@ version: '3.1'
 services:
 
     mongodb:
-        image: mongo:4.2.20-rc0-bionic
+        image: mongo:4.4.18
         container_name: mongodb
         #user: root
         ports:
-            - "27015:27017"
+            - "${HOST_PORT}:27017"
         restart: always
-        #environment:     
-        #     - MONGO_INITDB_ROOT_USERNAME= "root"
-        #     - MONGO_INITDB_ROOT_PASSWORD= "example"
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=${USER}
+            - MONGO_INITDB_ROOT_PASSWORD=${PASS}
         volumes:
              -  ./datadir:/data/db
              -  ./config/mongod.conf.orig:/etc/mongod.conf.orig
+             -  ./config/mongod.conf:/etc/mongod.conf
         
