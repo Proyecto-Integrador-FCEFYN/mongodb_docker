@@ -14,7 +14,11 @@ services:
             - MONGO_INITDB_ROOT_PASSWORD=${PASS}
         volumes:
              -  ./datadir:/data/db
-             -  ./config/mongod.conf.orig:/etc/mongod.conf.orig
-             -  ./config/mongod.conf:/etc/mongod.conf
              -  /etc/ssl/mongo.pem:/etc/ssl/mongo.pem
+        command:
+             - 'mongod'
+             - '--tlsMode'
+             - 'requireTLS'
+             - '--tlsCertificateKeyFile'
+             - '/etc/ssl/mongo.pem'
         
